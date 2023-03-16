@@ -19,7 +19,7 @@ const initGame = () => {
 const setStep = () => {
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("click", e => {
-            e.currentTarget.innerText = symbol;
+            e.currentTarget.classList.add(symbol);
             game[i] = symbol;
             checkWin(symbol);
             symbol = symbol === "x" ? "o" : "x";
